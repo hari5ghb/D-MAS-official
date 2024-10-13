@@ -9,62 +9,74 @@
         <meta Name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body class="text-gray-800 overflow-x-hidden">
-       <section class="mx-10 my-10 bg-gradient-to-b from-indigo-500 to-purple-700 rounded-2xl p-10 ">
-        <div class="container mx-auto max-w-screen-xl">
-            <div class="flex">
-                <a class="text-3xl font-bold pr-5 border-r border-gray-300 mr-5 text-white hover:text-yellow-300 transition duration-300" href="index.html"><img src="./assets/l1.jpg" class="w-12 h-12 rounded" alt=""></a>
-                <div class="my-auto">
-                    <button id="menu-toggle" class="pr-3 lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        <section class="mx-4 my-5 bg-gradient-to-b from-indigo-500 to-purple-700 rounded-2xl p-5 lg:mx-10 lg:my-10 lg:p-10">
+            <div class="container mx-auto max-w-screen-xl">
+                <div class="flex items-center justify-between">
+                    <a class="text-3xl font-bold pr-5 border-r border-gray-300 mr-5 text-white hover:text-yellow-300 transition duration-300" href="index.html">
+                        <img src="./assets/l1.jpg" class="w-12 h-12 rounded" alt="Logo">
+                    </a>
+                    <div class="my-auto">
+                        <button id="menu-toggle" class="pr-3 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                            </svg>
+                        </button>
+                        <ul id="navbar" class="hidden lg:flex font-bold text-gray-200">
+                            <li class="pr-5">
+                                <a href="" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Home</a>
+                            </li>
+                            <li class="pr-5">
+                                <a href="about.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">About</a>
+                            </li>
+                            <li class="pr-5">
+                                <a href="Services.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Services</a>
+                            </li>
+                            <li class="pr-5">
+                                <a href="Contact.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Contact</a>
+                            </li>
+                            <li class="pr-5">
+                                <a href="Blog.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Blog</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <a href="get-a-quote.html" class="flex ml-auto text-medium font-bold bg-yellow-500 text-white px-3 py-2 rounded hover:bg-yellow-400 transition duration-300">
+                        <span class="pr-2 hidden lg:block">Request a Price</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
                         </svg>
-                    </button>
-                    <ul id="navbar" class="hidden lg:flex font-bold text-gray-200">
-                        <li class="pr-5"><a href="" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Home</a></li>
-                        <li class="pr-5"><a href="about.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">About</a></li>
-                        <li class="pr-5"><a href="Services.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Services</a></li>
-                        <li class="pr-5"><a href="Contact.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Contact</a></li>
-                        <li class="pr-5"><a href="Blog.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Blog</a></li>
-                    </ul>
+                    </a>
                 </div>
-                <a href="get-a-quote.html" class="flex ml-auto text-medium font-bold bg-yellow-500 text-white px-3 py-2 rounded hover:bg-yellow-400 transition duration-300">
-                    <span class="pr-2 hidden lg:block">Request a Price</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-                    </svg>
-                </a>
-            </div>
-            <div class="flex py-12 lg:py-36">
-                <div class="w-full lg:w-1/2">
-                    <h2 class="text-center lg:text-left text-3xl lg:text-7xl font-bold lg:font-semibold text-white hover:text-yellow-300 transition duration-300">
-                        World Class Digital Marketing for Your Brand
-                    </h2>
-                    <p class="text-center lg:text-left mt-4 lg:mt-8 text-gray-300 hover:text-yellow-400">
-                        Elevate your brand's online presence with targeted strategies that deliver results.
-                    </p>
-                    <div class="flex mt-12 justify-center lg:justify-start">
-                        <a href="Services.html" class="mr-5 text-lg px-3 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-400 transition duration-300">
-                            Service
-                        </a>
-                        <a href="Contact.html" class="mr-5 text-lg px-3 py-2 bg-red-500 text-white rounded hover:bg-red-400 transition duration-300">
-                            Contact Us
-                        </a>
+                <div class="flex flex-col lg:flex-row py-8 lg:py-36">
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-center lg:text-left text-3xl lg:text-7xl font-bold lg:font-semibold text-white hover:text-yellow-300 transition duration-300">
+                            World Class Digital Marketing for Your Brand
+                        </h2>
+                        <p class="text-center lg:text-left mt-4 lg:mt-8 text-gray-300 hover:text-yellow-400">
+                            Elevate your brand's online presence with targeted strategies that deliver results.
+                        </p>
+                        <div class="flex mt-6 justify-center lg:justify-start">
+                            <a href="Services.html" class="mr-3 text-lg px-3 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-400 transition duration-300">
+                                Service
+                            </a>
+                            <a href="Contact.html" class="mr-3 text-lg px-3 py-2 bg-red-500 text-white rounded hover:bg-red-400 transition duration-300">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0">
+                        <img src="./assets/main2.jpeg" alt="" class="w-4/5 rounded-2xl opacity-50 hover:opacity-100 transition duration-500">
                     </div>
                 </div>
-                <div class="w-1/2 hidden lg:flex justify-end">
-                    <img src="./assets/main2.jpeg" alt="" class="w-4/5 rounded-2xl opacity-50 hover:opacity-100 transition duration-500">
+                <div class="flex justify-center text-gray-300 hover:text-yellow-300 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                    </svg>
+                    <span class="ml-2">scroll</span>
                 </div>
             </div>
-            <div class="flex justify-center text-gray-300 hover:text-yellow-300 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                </svg>
-                <span class="ml-2">
-                    scroll
-                </span>
-            </div>
-        </div>
-    </section>
+        </section>
+        
     
     <script>
         // JavaScript for toggling the mobile navigation menu
