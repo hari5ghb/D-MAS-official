@@ -7,37 +7,36 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 overflow-x-hidden">
 
     <!-- Navigation -->
     <nav class="bg-purple-600 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-white text-lg font-bold">Your Logo</div>
             <div class="flex space-x-4">
-                <a href="index.html" class="px-3 py-2 border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Home</a>
-                <a href="about.html" class="px-3 py-2 border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">About</a>
-                <a href="services.html" class="px-3 py-2 border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Services</a>
-                <a href="blog.html" class="px-3 py-2 border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Blog</a>
-                <a href="contact.html" class="px-3 py-2 border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Contact</a>
+                <a href="index.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="about.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">About</a>
+                <a href="services.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Services</a>
+                <a href="blog.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Blog</a>
             </div>
         </div>
     </nav>
-<style>
-    
-.d1{
-    background-color: rgb(255, 250, 245);
-}
-</style>
+
+    <style>
+        .d1 {
+            background-color: rgb(255, 250, 245);
+        }
+    </style>
+
     <!-- Contact Section -->
     <section class="d1 contact-section py-20">
-        <div class="flex col-auto">
-            <div class="mt-20 ml-10">
-                <img src="./assets/g2.jpeg" alt="">
+        <div class="container mx-auto flex flex-col md:flex-row justify-center items-center">
+            <div class="mt-10 md:mt-0">
+                <img src="./assets/g2.jpeg" alt="" class="max-w-xs mx-auto md:max-w-md">
             </div>
-          
-            <div class="mr-120">
-                <h2 class="text-5xl font-bold text-center mb-10">Get in Touch</h2>
-                <p class="text-gray-600 text-center mb-10">We would love to hear from you! Fill out the form below.</p>
+            <div class="mt-10 md:mt-0 md:ml-10">
+                <h2 class="text-5xl font-bold text-center mb-5">Get in Touch</h2>
+                <p class="text-gray-600 text-center mb-5">We would love to hear from you! Fill out the form below.</p>
                 <form id="contactForm" class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
                     <div class="mb-4">
                         <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
@@ -94,6 +93,55 @@
             responseDiv.style.display = 'none';  // Hide the response message on reload
         });
     </script>
-
+  <footer class="bg-gray-800 text-white py-8 ">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Column 1 -->
+            <div>
+                <h4 class="font-bold mb-2">Customer Service</h4>
+                <ul>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Returns</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Shipping Info</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Column 2 -->
+            <div>
+                <h4 class="font-bold mb-2">About Us</h4>
+                <ul>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Our Story</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                </ul>
+            </div>
+            <!-- Column 3 -->
+            <div>
+                <h4 class="font-bold mb-2">Digital Marketing</h4>
+                <ul>
+                    <li><a href="#" class="text-gray-400 hover:text-white">SEO Services</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Social Media Marketing</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Content Marketing</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Email Marketing</a></li>
+                </ul>
+            </div>
+            <!-- Column 4 -->
+            <div>
+                <h4 class="font-bold mb-2">Connect with Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-600 mt-6 pt-4 text-center">
+            <p class="text-gray-400">© 2024 D-MAS. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
