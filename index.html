@@ -7,319 +7,393 @@
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <meta Name="description" content="">
         <meta Name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </head>
     <body class="text-gray-800 overflow-x-hidden">
-        <section class="mx-4 my-5 bg-gradient-to-b from-indigo-500 to-purple-700 rounded-2xl p-5 lg:mx-10 lg:my-10 lg:p-10">
-            <div class="container mx-auto max-w-screen-xl">
-                <div class="flex items-center justify-between">
-                    <a class="text-3xl font-bold pr-5 border-r border-gray-300 mr-5 text-white hover:text-yellow-300 transition duration-300" href="index.html">
-                        <img src="./assets/l1.jpg" class="w-12 h-12 rounded" alt="Logo">
-                    </a>
-                    <div class="my-auto">
-                        <button id="menu-toggle" class="pr-3 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                            </svg>
-                        </button>
-                        <ul id="navbar" class="hidden lg:flex font-bold text-gray-200">
-                            <li class="pr-5">
-                                <a href="" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Home</a>
-                            </li>
-                            <li class="pr-5">
-                                <a href="about.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">About</a>
-                            </li>
-                            <li class="pr-5">
-                                <a href="Services.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Services</a>
-                            </li>
-                            <li class="pr-5">
-                                <a href="Contact.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Contact</a>
-                            </li>
-                            <li class="pr-5">
-                                <a href="Blog.html" class="px-3 py-2 text-white border border-transparent hover:text-yellow-300 transition duration-300 md:hover:border-transparent md:hover:text-yellow-300">Blog</a>
-                            </li>
-                        </ul>
-                        
-                    </div>
-                    <a href="get-a-quote.html" class="flex ml-auto text-medium font-bold bg-yellow-500 text-white px-3 py-2 rounded hover:bg-yellow-400 transition duration-300">
-                        <span class="pr-2 hidden lg:block">Request a Price</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="flex flex-col lg:flex-row py-8 lg:py-36">
-                    <div class="w-full lg:w-1/2">
-                        <h2 class="text-center lg:text-left text-3xl lg:text-7xl font-bold lg:font-semibold text-white hover:text-yellow-300 transition duration-300">
-                            World Class Digital Marketing for Your Brand
-                        </h2>
-                        <p class="text-center lg:text-left mt-4 lg:mt-8 text-gray-300 hover:text-yellow-400">
-                            Elevate your brand's online presence with targeted strategies that deliver results.
-                        </p>
-                        <div class="flex mt-6 justify-center lg:justify-start">
-                            <a href="Services.html" class="mr-3 text-lg px-3 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-400 transition duration-300">
-                                Service
-                            </a>
-                            <a href="Contact.html" class="mr-3 text-lg px-3 py-2 bg-red-500 text-white rounded hover:bg-red-400 transition duration-300">
-                                Contact Us
-                            </a>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0">
-                        <img src="./assets/main2.jpeg" alt="" class="w-4/5 rounded-2xl opacity-50 hover:opacity-100 transition duration-500">
-                    </div>
-                </div>
-                <div class="flex justify-center text-gray-300 hover:text-yellow-300 transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                    </svg>
-                    <span class="ml-2">scroll</span>
-                </div>
-            </div>
-        </section>
-        
+      <!-- Custom CSS for Animations -->
+     <style>
+        /* Keyframes for animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-60px); /* Moves from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%); /* Moves from the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%); /* Moves from the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%); /* Moves from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%); /* Moves from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation classes */
+.animate-fadeInDown {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slideInFromLeft {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-slideInFromRight {
+    animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.animate-slideInFromTop {
+    animation: slideInFromTop 0.8s ease-out forwards;
+}
+
+.animate-slideInFromBottom {
+    animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+
+     </style>
     
-    <script>
-        // JavaScript for toggling the mobile navigation menu
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const navbar = document.getElementById('navbar');
-            navbar.classList.toggle('hidden');
-        });
-    </script>
         
-        <section class="mx-10 my-10 bg-gradient-to-b from-purple-700 to-pink-600 p-5 mb-10 rounded-2xl">
-            <div class="container mx-auto">
-                <div class="py-16 lg:py-28">
-                    <h1 class="text-3xl lg:text-5xl font-bold text-center mb-5 text-white hover:text-yellow-300">Our Services</h1>
-                    <p class="text-white lg:w-1/2 m-auto hover:text-yellow-300">
-                        At D-MAS, we offer a range of digital marketing services designed to elevate your brand and connect you with your audience effectively.
-                    </p>
+    <section class="mx-10 my-10 p-5 mb-10 rounded-2xl" style="background: linear-gradient(to bottom, #100138, #100431);">
+              <div class="container mx-auto max-w-screen-xl">
+            <div class="flex items-center justify-between animate-slideInFromLeft">
+                <a class="text-3xl font-bold pr-5 border-r border-gray-300 mr-5 text-white hover:text-yellow-300 transition duration-300" href="index.html">
+                    <img src="./assets/l1.jpg" class="w-12 h-12 rounded" alt="Logo">
+                </a>
+                <div class="my-auto">
+                    <button id="menu-toggle" class="pr-3 lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                        </svg>
+                    </button>
+                    <ul id="navbar" class="hidden lg:flex font-bold text-gray-200">
+                        <li class="pr-5"> <a href="index.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Home</a></li>
+                        <li class="pr-5"> <a href="about.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">About</a></li>
+                        <li class="pr-5"> <a href="Services.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Services</a></li>
+                        <li class="pr-5"> <a href="Contact.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Contact</a></li>
+                        <li class="pr-5"> <a href="Blog.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Blog</a></li>
+                    </ul>
                 </div>
-                <div class="flex flex-wrap justify-center">
-                    <!-- Service 1 -->
-                    <div class="relative w-full lg:w-1/3 p-3">
-                        <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
-                            <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
-                                <!-- Front of the Card -->
-                                <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/g7.gif');">
-                                </div>
-                                <!-- Back of the Card -->
-                                <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div class="text-left text-white">
-                                        <h3 class="font-bold mb-3">Social Media Marketing</h3>
-                                        <p>Connect with your audience through strategic campaigns on platforms like Facebook, Instagram, and Twitter.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <a href="get-a-quote.html" class="flex ml-auto text-medium font-bold bg-yellow-500 text-white px-3 py-2 rounded hover:bg-yellow-400 transition duration-300 animate-slideInFromTop">
+                    <span class="pr-2 hidden lg:block">Request a Price</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="flex flex-col lg:flex-row py-8 lg:py-36">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-center lg:text-left text-3xl lg:text-7xl font-bold lg:font-semibold text-yellow-400">
+                        World Class Digital Marketing for Your Brand
+                    </h2>
+                    <p class="text-center lg:text-left mt-4 lg:mt-8 text-gray-300 hover:text-yellow-400 animate-fadeIn delay-200">
+                        Elevate your brand's online presence with targeted strategies that deliver results.
+                    </p>
+                    <div class="flex mt-6 justify-center lg:justify-start animate-slideInFromLeft delay-300">
+                        <a href="services.html" class="mr-3 text-lg px-3 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-400 transition duration-300">
+                            Service
+                        </a>
+                        <a href="contact.html" class="mr-3 text-lg px-3 py-2 bg-red-500 text-white rounded hover:bg-red-400 transition duration-300">
+                            Contact Us
+                        </a>
                     </div>
-        
-                    <!-- Service 2 -->
-                    <div class="relative w-full lg:w-1/3 p-3">
-                        <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
-                            <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
-                                <!-- Front of the Card -->
-                                <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/g9.jpeg');">
-                                </div>
-                                <!-- Back of the Card -->
-                                <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div class="text-left text-white">
-                                        <h3 class="font-bold mb-3">Website Design</h3>
-                                        <p>Craft stunning websites that not only look great but also convert visitors into customers.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Service 3 -->
-                    <div class="relative w-full lg:w-1/3 p-3">
-                        <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
-                            <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
-                                <!-- Front of the Card -->
-                                <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/pi5.jpeg');">
-                                </div>
-                                <!-- Back of the Card -->
-                                <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div class="text-left text-white">
-                                        <h3 class="font-bold mb-3">Google Ads</h3>
-                                        <p>Maximize your online visibility and attract targeted traffic with expertly managed Google Ads campaigns.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Service 4 -->
-                    <div class="relative w-full lg:w-1/3 p-3">
-                        <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
-                            <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
-                                <!-- Front of the Card -->
-                                <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/m1.jpeg');">
-                                </div>
-                                <!-- Back of the Card -->
-                                <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div class="text-left text-white">
-                                        <h3 class="font-bold mb-3">Meta Ads</h3>
-                                        <p>Engage your audience on Facebook and Instagram with targeted Meta Ads that drive results.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Service 5 -->
-                    <div class="relative w-full lg:w-1/3 p-3">
-                        <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
-                            <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
-                                <!-- Front of the Card -->
-                                <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/s2.jpeg');">
-                                </div>
-                                <!-- Back of the Card -->
-                                <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div class="text-left text-white">
-                                        <h3 class="font-bold mb-3">Logo Poster Design</h3>
-                                        <p>Create stunning and memorable logos that capture the essence of your brand and leave a lasting impression.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Service 6 -->
-                    <div class="relative w-full lg:w-1/3 p-3">
-                        <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
-                            <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
-                                <!-- Front of the Card -->
-                                <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/s1.jpeg');">
-                                </div>
-                                <!-- Back of the Card -->
-                                <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div class="text-left text-white">
-                                        <h3 class="font-bold mb-3">SEO Optimization</h3>
-                                        <p>Improve your website’s visibility on search engines and attract more organic traffic with our SEO services.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0 animate-fadeIn delay-300">
+                    <img src="./assets/main2.jpeg" alt="" class="w-4/5 rounded-2xl">
                 </div>
             </div>
-        </section>
+            <div class="flex justify-center text-gray-300 hover:text-yellow-300 transition duration-300 animate-bounce text-1xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 5.25L12 12.75l7.5-7.5M4.5 11.25L12 18.75l7.5-7.5" />
+                </svg>
+                <span class="ml-2">scroll</span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="mx-10 my-10 bg-gradient-to-b from-purple-700 to-pink-600 p-5 mb-10 rounded-2xl">
+        <div class="container mx-auto">
+            <div class="py-16 lg:py-28">
+                <h1 class="text-3xl lg:text-5xl font-bold text-center mb-5 text-white hover:text-yellow-300">Our Services</h1>
+                <p class="text-white lg:w-1/2 m-auto hover:text-yellow-300">
+                    At D-MAS, we offer a range of digital marketing services designed to elevate your brand and connect you with your audience effectively.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center">
+                <!-- Service 1 -->
+                <div class="relative w-full lg:w-1/3 p-3">
+                    <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
+                            <!-- Front of the Card -->
+                            <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/g7.gif');">
+                            </div>
+                            <!-- Back of the Card -->
+                            <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-left text-black">
+                                    <h3 class="font-bold mb-3">Social Media Marketing</h3>
+                                    <p>Connect with your audience through strategic campaigns on platforms like Facebook, Instagram, and Twitter.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 2 -->
+                <div class="relative w-full lg:w-1/3 p-3">
+                    <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
+                            <!-- Front of the Card -->
+                            <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/g9.jpeg');">
+                            </div>
+                            <!-- Back of the Card -->
+                            <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-left text-black">
+                                    <h3 class="font-bold mb-3">Website Design</h3>
+                                    <p>Craft stunning websites that not only look great but also convert visitors into customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 3 -->
+                <div class="relative w-full lg:w-1/3 p-3">
+                    <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
+                            <!-- Front of the Card -->
+                            <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/pi5.jpeg');">
+                            </div>
+                            <!-- Back of the Card -->
+                            <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-left text-black">
+                                    <h3 class="font-bold mb-3">Google Ads</h3>
+                                    <p>Maximize your online visibility and attract targeted traffic with expertly managed Google Ads campaigns.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 4 -->
+                <div class="relative w-full lg:w-1/3 p-3">
+                    <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
+                            <!-- Front of the Card -->
+                            <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/m1.jpeg');">
+                            </div>
+                            <!-- Back of the Card -->
+                            <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-left text-black">
+                                    <h3 class="font-bold mb-3">Meta Ads</h3>
+                                    <p>Engage your audience on Facebook and Instagram with targeted Meta Ads that drive results.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 5 -->
+                <div class="relative w-full lg:w-1/3 p-3">
+                    <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
+                            <!-- Front of the Card -->
+                            <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/s2.jpeg');">
+                            </div>
+                            <!-- Back of the Card -->
+                            <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-left text-black">
+                                    <h3 class="font-bold mb-3">Logo Poster Design</h3>
+                                    <p>Create stunning and memorable logos that capture the essence of your brand and leave a lasting impression.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 6 -->
+                <div class="relative w-full lg:w-1/3 p-3">
+                    <div class="flip-card group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <div class="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full h-full absolute top-0 left-0">
+                            <!-- Front of the Card -->
+                            <div class="flip-card-front w-full h-full bg-cover bg-center transition-all duration-300" style="background-image: url('./assets/s1.jpeg');">
+                            </div>
+                            <!-- Back of the Card -->
+                            <div class="flip-card-back w-full h-full absolute top-0 left-0 flex items-center justify-center bg-black p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-left text-black">
+                                    <h3 class="font-bold mb-3">SEO Optimization</h3>
+                                    <p>Improve your website’s visibility on search engines and attract more organic traffic with our SEO services.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+   
         
-        <!-- Flip Card CSS (you can place it in a separate CSS file) -->
-        <style>
-            .flip-card {
-                perspective: 1000px;
-            }
-        
-            .flip-card-inner {
-                transform-style: preserve-3d;
-                transition: transform 0.5s;
-            }
-        
-            .flip-card-front, .flip-card-back {
-                backface-visibility: hidden;
-            }
-        
-            .flip-card-back {
-                transform: rotateY(180deg);
-            }
-        
-            .flip-card:hover .flip-card-inner {
-                transform: rotateY(180deg);
-            }
-        </style>
+    <style>
+        .flip-card {
+            perspective: 1000px;
+        }
+        /* Apply size to the social media icons */
+.icon-size {
+    width: 30px;  /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+}
+
+/* Optionally, add hover effects for the icons */
+.text-gray-400:hover .icon-size {
+    opacity: 0.8;  /* Slightly fade when hovering */
+}
+/* Control icon size through CSS */
+.icon-size {
+    width: 60px;   /* Adjust the width */
+    height: 60px;  /* Adjust the height */
+}
+
+/* Optional: Add hover effect */
+.whatsapp-icon:hover .icon-size {
+    opacity: 0.8; /* Slight fade effect on hover */
+}
+
+    
+        .flip-card-inner {
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+    
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+        }
+    
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background:white; /* Dark semi-transparent background */
+        }
+    
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+    </style>
         
      
-<section class="mx-10 my-10 bg-gradient-to-b from-pink-500 to-red-600 rounded-2xl p-5 mb-10">
-    <div class="container mx-auto">
-        <div class="py-16 lg:py-28">
-            <h1 class="text-3xl lg:text-5xl font-bold text-center mb-5 text-white hover:text-black">Our Digital Marketing Portfolio</h1>
-            <p class="text-gray-200 lg:w-1/2 m-auto text-center hover:text-black">
-                Discover our successful digital marketing campaigns that have transformed businesses. Our innovative strategies and creative designs drive results and engage audiences effectively.
-            </p>
-        </div>
-        <div class="flex flex-wrap justify-center mb-20">
-            <!-- Portfolio Project 1 -->
-            <div class="w-full md:w-1/2 py-4 mb-10 md:pt-24">
-                <div class="w-full md:w-11/12 lg:w-8/12 mx-auto">
-                    <div class="bg-white rounded-3xl shadow-lg hover:bg-black transition duration-300">
-                        <img class="rounded-t-3xl" src="./assets/digital_marketing_project1.png" alt="Digital Marketing Project 1">
-                        <div class="m-2 p-3">
-                            <span class="border border-green-500 rounded-3xl bg-green-200 px-2">Campaign</span>
-                            <span class="border border-red-500 ml-2 bg-red-100 rounded-3xl px-2">Social Media</span>
-                            <p class="text-black mt-4 text-2xl font-semibold hover:text-white">Social Media Campaign for Brand X</p>
+        <section class="mx-10 my-10 bg-gradient-to-b from-pink-500 to-red-600 rounded-2xl p-5 mb-10">
+            <div class="container mx-auto">
+                <div class="py-16 lg:py-28">
+                    <h1 class="text-3xl lg:text-5xl font-bold text-center mb-5 text-white hover:text-black">Our Trusted Partners</h1>
+                    <p class="text-gray-200 lg:w-1/2 m-auto text-center hover:text-black">
+                        We are proud to be affiliated with some of the leading companies in the industry. Our strategic partnerships help us deliver exceptional results and offer comprehensive solutions to our clients.
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center mb-20">
+                    <!-- Chennai Surprise Partnership -->
+                    <div class="w-full md:w-1/2 py-4 mb-10 md:pt-24 ">
+                        <div class="w-full md:w-11/12 lg:w-8/12 mx-auto">
+                            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition duration-300">
+                                <!-- Full width image, removed the rounded top corners for the image -->
+                                <img class="w-full rounded-t-3xl" src="./assets/ss12.png" alt="Chennai Surprise">
+                                <div class="m-2 p-3">
+                                    <span class="border border-green-500 rounded-3xl bg-green-200 px-2">Official Partner</span>
+                                    <span class="border border-red-500 ml-2 bg-red-100 rounded-3xl px-2">Events & Campaigns</span>
+                                    <a href="https://search.app?link=https%3A%2F%2Fchennaisurprise.com%2F&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"><p class="text-blue-400 mt-4 text-2xl font-semibold hover:text-blue-700 ">Partnership with Chennai Surprise</p></a>
+                                    <p class="text-black mt-2">We are proud to be affiliated with Chennai Surprise, collaborating on innovative event marketing strategies to engage and delight audiences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Fortified APC Partnership -->
+                    <div class="w-full md:w-1/2 py-4 mb-10 md:pt-24 ">
+                        <div class="w-full md:w-11/12 lg:w-8/12 mx-auto">
+                            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition duration-300">
+                                <!-- Full width image, removed the rounded top corners for the image -->
+                                <img class="w-full rounded-t-3xl" src="./assets/ss123.png" alt="Fortified APC">
+                                <div class="m-2 p-3">
+                                    <span class="border border-green-500 rounded-3xl bg-green-200 px-2">Official Partner</span>
+                                    <span class="border border-red-500 ml-2 bg-red-100 rounded-3xl px-2">Security Solutions</span>
+                                  <a href="http://www.fortifiedapc.com/home">  <p class="text-blue-400 mt-4 text-2xl font-semibold hover:text-blue-700 ">Partnership with Fortified APC</p></a>
+                                    <p class="text-black mt-2">Our collaboration with Fortified APC brings advanced security solutions, ensuring the protection of businesses and critical infrastructures.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Portfolio Project 2 -->
-            <div class="w-full md:w-1/2 py-4 mb-10 md:pt-24">
-                <div class="w-full md:w-11/12 lg:w-8/12 mx-auto">
-                    <div class="bg-white rounded-3xl shadow-lg hover:bg-black transition duration-300">
-                        <img class="rounded-t-3xl" src="" alt="Digital Marketing Project 2">
-                        <div class="m-2 p-3">
-                            <span class="border border-green-500 rounded-3xl bg-green-200 px-2">Project</span>
-                            <span class="border border-red-500 ml-2 bg-red-100 rounded-3xl px-2">SEO</span>
-                            <p class="text-black mt-4 text-2xl font-semibold hover:text-white">SEO Optimization for Website Y</p>
-                        </div>
-                    </div>
+                
+        
+                <div class="flex justify-center pb-24">
+                    <a class="bg-purple-600 border border-black px-2 rounded text-white hover:bg-purple-800 transition duration-300" href="Partners.html">
+                        Learn More About Our Partners
+                    </a>
                 </div>
             </div>
-
-            <!-- Portfolio Project 3 -->
-            <div class="w-full md:w-1/2 py-4 mb-10 md:pt-24">
-                <div class="w-full md:w-11/12 lg:w-8/12 mx-auto">
-                    <div class="bg-white rounded-3xl shadow-lg hover:bg-black transition duration-300">
-                        <img class="rounded-t-3xl" src="./assets/digital_marketing_project3.png" alt="Digital Marketing Project 3">
-                        <div class="m-2 p-3">
-                            <span class="border border-green-500 rounded-3xl bg-green-200 px-2">Campaign</span>
-                            <span class="border border-red-500 ml-2 bg-red-100 rounded-3xl px-2">Email Marketing</span>
-                            <p class="text-black mt-4 text-2xl font-semibold hover:text-white">Email Marketing for Product Z</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portfolio Project 4 -->
-            <div class="w-full md:w-1/2 py-4 mb-10 md:pt-24">
-                <div class="w-full md:w-11/12 lg:w-8/12 mx-auto">
-                    <div class="bg-white rounded-3xl shadow-lg hover:bg-black transition duration-300">
-                        <img class="rounded-t-3xl" src="./assets/digital_marketing_project4.png" alt="Digital Marketing Project 4">
-                        <div class="m-2 p-3">
-                            <span class="border border-green-500 rounded-3xl bg-green-200 px-2">Strategy</span>
-                            <span class="border border-red-500 ml-2 bg-red-100 rounded-3xl px-2">PPC</span>
-                            <p class="text-black mt-4 text-2xl font-semibold hover:text-white">PPC Campaign for Service A</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portfolio Project 5 -->
-            <div class="w-full md:w-1/2 py-4 mb-10 md:pt-24">
-                <div class="w-full md:w-11/12 lg:w-8/12 mx-auto">
-                    <div class="bg-white rounded-3xl shadow-lg hover:bg-black transition duration-300">
-                        <img class="rounded-t-3xl" src="./assets/digital_marketing_project5.png" alt="Digital Marketing Project 5">
-                        <div class="m-2 p-3">
-                            <span class="border border-green-500 rounded-3xl bg-green-200 px-2">Branding</span>
-                            <span class="border border-red-500 ml-2 bg-red-100 rounded-3xl px-2">Content Marketing</span>
-                            <p class="text-black mt-4 text-2xl font-semibold hover:text-white">Content Marketing for Business B</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex justify-center pb-24">
-            <a class="bg-purple-600 border border-black px-2 rounded text-white hover:bg-purple-800 transition duration-300" href="Services.html">
-                Explore More
-            </a>
-        </div>
-    </div>
-</section>
-
+        </section>
         
 <section class="mx-10 my-10 bg-gradient-to-b from-red-600 to-yellow-200 p-5 mb-10 rounded-2xl">
             <div class="container mx-auto">
@@ -594,13 +668,21 @@
                     </div>
                     <!-- Column 4 -->
                     <div>
-                        <h4 class="font-bold mb-2">Connect with Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                       <h4 >Connect with Us</h4>
+                       <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/fx.kowshi/profilecard/?igsh=OTNhcXdqZmo3amMx" class="text-gray-400 hover:text-white">
+                            <img src="./assets/instagram.png" alt="Instagram" class="icon-size">
+                        </a>
+                       
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <img src="./assets/gmail.png" alt="Gmail" class="icon-size">
+                        </a>
+                    
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <img src="./assets/facebook.png" alt="Facebook" class="icon-size">
+                        </a>
+                    </div>
+                    
                     </div>
                 </div>
                 
@@ -612,6 +694,28 @@
         
         <!-- Include Font Awesome for social media icons -->
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <a href="https://wa.me/+918940001929" target="_blank" class="whatsapp-icon">
+            <img src="./assets/whatsapp.png" alt="WhatsApp" class="icon-size">
+        </a>
         
+        <style>
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+    transition: box-shadow 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+   padding:30px;
+   transition: 0.4s;
+}
+
+        </style>
     </body>
 </html>
