@@ -19,7 +19,8 @@
             <p class="text-center text-lg text-gray-600 mb-12">
                 Let us know what services you're interested in, and we'll provide you with a custom quote tailored to your needs.
             </p>
-            <form id="quoteForm" class="bg-white p-8 shadow-lg rounded-lg border border-gray-300">
+            <form id="quoteForm" action="submit_quote.php" method="POST" class="bg-white p-8 shadow-lg rounded-lg border border-gray-300">
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Name -->
                     <div class="flex flex-col">
@@ -93,17 +94,19 @@
         const form = document.getElementById('quoteForm');
         const successModal = document.getElementById('successModal');
         const closeModal = document.getElementById('closeModal');
-
+    
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
             successModal.style.display = 'flex'; // Show modal
             form.reset(); // Reset form fields
         });
-
+    
         closeModal.addEventListener('click', function() {
             successModal.style.display = 'none'; // Hide modal
-            window.location.href = '/'; // Redirect to home page
+            window.location.href = 'http://localhost/path/to/your/form.html'; // Replace with your actual form URL
         });
     </script>
+    
+    
 </body>
 </html>

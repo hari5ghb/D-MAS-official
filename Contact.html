@@ -37,23 +37,24 @@
             <div class="mt-10 md:mt-0 md:ml-10">
                 <h2 class="text-5xl font-bold text-center mb-5">Get in Touch</h2>
                 <p class="text-gray-600 text-center mb-5">We would love to hear from you! Fill out the form below.</p>
-                <form id="contactForm" class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                <form id="contactForm" action="http://localhost:3000/contact" method="POST" class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
                     <div class="mb-4">
                         <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                        <input type="text" id="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+                        <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                        <input type="email" id="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
+                        <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
                     </div>
                     <div class="mb-4">
                         <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-                        <textarea id="message" rows="4" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message"></textarea>
+                        <textarea id="message" name="message" rows="4" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message"></textarea>
                     </div>
                     <div class="flex justify-center">
                         <button type="submit" class="bg-purple-600 text-white font-bold py-2 px-6 rounded hover:bg-purple-700 focus:outline-none focus:shadow-outline">Send Message</button>
                     </div>
                 </form>
+                
 
                 <!-- Success Message (initially hidden using inline style) -->
                 <div id="response" class="mt-8" style="display: none;">
@@ -74,24 +75,27 @@
     </footer>
 
     <script>
-        const form = document.getElementById('contactForm');
-        const responseDiv = document.getElementById('response');
-
         form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-            
-            // Hide the form after submission
-            form.style.display = 'none';
-            
-            // Show the response message by changing the display style
-            responseDiv.style.display = 'block';
-        });
+    event.preventDefault(); // Prevent the form from submitting normally
 
-        // Reset the form visibility when the page reloads
-        window.addEventListener('load', function () {
-            form.style.display = 'block';  // Ensure the form is displayed on reload
-            responseDiv.style.display = 'none';  // Hide the response message on reload
-        });
+    const formData = new FormData(form);
+
+    fetch('process_form.php', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+        // Display the response message
+        responseDiv.innerHTML = data;
+        responseDiv.style.display = 'block';
+        form.style.display = 'none'; // Hide the form after submission
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
     </script>
   <footer class="bg-gray-800 text-white py-8 ">
     <div class="container mx-auto px-6">
