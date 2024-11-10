@@ -113,11 +113,55 @@
 .delay-400 {
     animation-delay: 0.4s;
 }
+@media (max-width: 1024px) {
+    #navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: black; /* Optional, for better visibility */
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    #navbar li {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        list-style-type: none;
+    }
+
+    /* Show navbar when toggle is clicked */
+    .show-navbar {
+        display: flex !important;
+    }
+
+    /* Move .my-auto div down when navbar is shown */
+    .move-down {
+        margin-top: 250px; /* Adjust this value to suit your design */
+    }
+}
 
 
      </style>
     
-        
+        <script>
+    // Wait for the document to fully load before adding event listeners
+   // Wait for the document to fully load before adding event listeners
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    const myAutoDiv = document.querySelector('.middleclass');
+
+    // Event listener for toggling the navbar
+    menuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('show-navbar');
+        myAutoDiv.classList.toggle('move-down'); // Add margin to push the content down
+    });
+});
+
+        </script>
     <section class="mx-10 my-10 p-5 mb-10 rounded-2xl" style="background: linear-gradient(to bottom, #100138, #100431);">
               <div class="container mx-auto max-w-screen-xl">
             <div class="flex items-center justify-between animate-slideInFromLeft">
@@ -125,19 +169,33 @@
                     <img src="./assets/l1.jpg" class="w-12 h-12 rounded" alt="Logo">
                 </a>
                 <div class="my-auto">
+                    <!-- Mobile toggle button -->
                     <button id="menu-toggle" class="pr-3 lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                         </svg>
                     </button>
+            
+                    <!-- Navbar, initially hidden on mobile -->
                     <ul id="navbar" class="hidden lg:flex font-bold text-gray-200">
-                        <li class="pr-5"> <a href="index.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Home</a></li>
-                        <li class="pr-5"> <a href="about.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">About</a></li>
-                        <li class="pr-5"> <a href="Services.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Services</a></li>
-                        <li class="pr-5"> <a href="Contact.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Contact</a></li>
-                        <li class="pr-5"> <a href="Blog.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Blog</a></li>
+                        <li class="pr-5">
+                            <a href="index.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Home</a>
+                        </li>
+                        <li class="pr-5">
+                            <a href="about.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">About</a>
+                        </li>
+                        <li class="pr-5">
+                            <a href="Services.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Services</a>
+                        </li>
+                        <li class="pr-5">
+                            <a href="Contact.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Contact</a>
+                        </li>
+                        <li class="pr-5">
+                            <a href="Blog.html" class="px-3 py-2 text-white border border-transparent hover:border-yellow-300 rounded hover:text-yellow-300 transition duration-300">Blog</a>
+                        </li>
                     </ul>
                 </div>
+                
                 <a href="get-a-quote.html" class="flex ml-auto text-medium font-bold bg-yellow-500 text-white px-3 py-2 rounded hover:bg-yellow-400 transition duration-300 animate-slideInFromTop">
                     <span class="pr-2 hidden lg:block">Request a Price</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -145,7 +203,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="flex flex-col lg:flex-row py-8 lg:py-36">
+            <div class="flex flex-col lg:flex-row py-8 lg:py-36 middleclass">
                 <div class="w-full lg:w-1/2">
                     <h2 class="text-center lg:text-left text-3xl lg:text-7xl font-bold lg:font-semibold text-yellow-400">
                         World Class Digital Marketing for Your Brand
