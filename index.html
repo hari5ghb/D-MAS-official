@@ -794,6 +794,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <!-- loading -->
- 
+<style>
+    /* Center the GIF on the screen */
+    #loadingGif {
+      display: block;
+      margin: 0 auto;
+      position: fixed; /* Keep it in view */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Hide the main content until the page is fully loaded */
+    #mainContent {
+      display: none;
+    }
+  </style>
+<!-- Loading GIF -->
+<img src="./assets/loading (1).gif" alt="Loading..." id="loadingGif">
+
+<!-- Main Content -->
+<div id="mainContent">
+<h1>Welcome to My Website!</h1>
+<p>This content appears after the page loads completely.</p>
+</div>
+
+<script>
+window.onload = function() {
+  // Keep the loading GIF visible for at least 2 seconds, even if the page loads fast
+  setTimeout(function() {
+    document.getElementById('loadingGif').style.display = 'none';
+    document.getElementById('mainContent').style.display = 'block';
+  }, 2000); // 2000 milliseconds = 2 seconds
+};
+</script>
     </body>
 </html>
