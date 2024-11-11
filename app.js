@@ -1,3 +1,4 @@
+require('dotenv').config();  // Load environment variables from .env file
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -7,11 +8,12 @@ const app = express();
 const PORT = 3000;
 
 // Middleware to parse URL-encoded data and serve static files
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname));  // Serve static files from the root directory
+app.use(express.urlencoded({ extended: true })); // Using Express's built-in parser
+app.use(express.static(path.join(__dirname, 'public')));  // Serve static files from the 'public' folder
 
-// Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/contactDB")
+// Connect to MongoDB using the URI from the .env file
+const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/contactDB";  // Default to local MongoDB if no URI in .env
+mongoose.connect(mongoURI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Failed to connect to MongoDB:", err));
 
@@ -26,7 +28,7 @@ const contactSchema = new mongoose.Schema({
 // Create a model based on the schema
 const Contact = mongoose.model("Contact", contactSchema);
 
-// Serve the Contact HTML file
+// Serve the Contact HTML page
 app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, 'Contact.html'));  // Serve the contact page from the root directory
 });
