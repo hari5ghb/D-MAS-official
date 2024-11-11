@@ -803,30 +803,40 @@ document.addEventListener("DOMContentLoaded", function() {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 100px; /* Adjust GIF size */
     }
-
+  
     /* Hide the main content until the page is fully loaded */
     #mainContent {
       display: none;
     }
+  
+    /* Tailwind utility for md screen */
+    @media (min-width: 768px) {
+      #loadingGif {
+        width: 150px; /* Increase size for larger screens */
+      }
+    }
   </style>
-<!-- Loading GIF -->
-<img src="./assets/loading (1).gif" alt="Loading..." id="loadingGif">
-
-<!-- Main Content -->
-<div id="mainContent">
-<h1>Welcome to My Website!</h1>
-<p>This content appears after the page loads completely.</p>
-</div>
-
-<script>
-window.onload = function() {
-  // Keep the loading GIF visible for at least 2 seconds, even if the page loads fast
-  setTimeout(function() {
-    document.getElementById('loadingGif').style.display = 'none';
-    document.getElementById('mainContent').style.display = 'block';
-  }, 2000); // 2000 milliseconds = 2 seconds
-};
-</script>
+  
+  <!-- Loading GIF -->
+  <img src="./assets/loading (1).gif" alt="Loading..." id="loadingGif">
+  
+  <!-- Main Content -->
+  <div id="mainContent" class="hidden md:block">
+    <h1 class="text-center text-lg md:text-2xl">Welcome to My Website!</h1>
+    <p class="text-center text-sm md:text-base">This content appears after the page loads completely.</p>
+  </div>
+  
+  <script>
+    window.onload = function() {
+      // Keep the loading GIF visible for at least 2 seconds, even if the page loads fast
+      setTimeout(function() {
+        document.getElementById('loadingGif').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+      }, 2000); // 2000 milliseconds = 2 seconds
+    };
+  </script>
+  
     </body>
 </html>
